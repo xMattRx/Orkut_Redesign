@@ -1,0 +1,64 @@
+.Form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__data {
+        align-items: center;
+        background-color: #FFF;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 48px;
+        padding: 48px 24px 48px 24px;
+        width: 327px;
+    }
+
+    &__logo {
+        margin-bottom: 16px;
+        width: 31px;
+    }
+
+    &__title {
+        color: #ED2590;
+        font-family: "Inter";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29.05px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    &__input {
+        background-color: #EFF3F8;
+        border: none;
+        color: #868686;
+        font-family: "Inter";
+        outline: none;
+        margin-bottom: 24px;
+        padding: 16px;
+        width: 279px;
+        border-radius: 8px;
+        opacity: 0px;
+
+        &::placeholder {
+            color: #868686;
+            font-family: "Inter";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.94px;
+            text-align: left;
+        }
+    }
+    &__passwordContainer{
+        display: flex;
+        gap: 8px;
+    }
+}
