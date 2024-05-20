@@ -1,7 +1,61 @@
-.NavBar{
+.navBar {
     background-color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+
+    @media (min-width: 768px) {
+        padding: 34px 32px;
+    }
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1216px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            justify-content: space-between;
+        }
+
+    }
+
+
+
+
+    &__nav {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__list {
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 24px;
+        }
+    }
+
+    &__listItem {
+
+
+        @media (min-width: 768px) {
+            color: #4B4B4B;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration: none;
+
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 18px;
+        }
+
+    }
 }

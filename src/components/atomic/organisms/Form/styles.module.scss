@@ -1,4 +1,4 @@
-.Form {
+.form {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -7,6 +7,20 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        height: calc(100vh - (40px + 64px));
+
+        @media (min-width: 768px) {
+            height: calc(100vh - (48px + 92px));
+        }
+    }
+
+    &__error {
+        align-self: flex-start;
+        color: rgb(231, 53, 53);
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
     }
 
     &__data {
@@ -16,9 +30,22 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 48px;
         padding: 48px 24px 48px 24px;
-        width: 327px;
+        max-width: 327px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            max-width: 448px;
+        }
+
+        @media (min-width: 1024px) {
+            min-width: 384px;
+            height: 596px;
+        }
+
+
+
+
     }
 
     &__logo {
@@ -28,37 +55,150 @@
 
     &__title {
         color: #ED2590;
-        font-family: "Inter";
+        cursor: default;
         font-size: 24px;
         font-weight: 600;
         line-height: 29.05px;
         margin-bottom: 40px;
         text-align: left;
+
+
     }
 
-    &__input {
-        background-color: #EFF3F8;
+    &__inputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+       &__input {
+        background-color: #EFF3F8 !important;
         border: none;
         color: #868686;
-        font-family: "Inter";
         outline: none;
         margin-bottom: 24px;
         padding: 16px;
-        width: 279px;
         border-radius: 8px;
-        opacity: 0px;
+        max-width: -webkit-fill-available;
+        width: 100%;
+
+
+
 
         &::placeholder {
             color: #868686;
-            font-family: "Inter";
             font-size: 14px;
             font-weight: 400;
             line-height: 16.94px;
             text-align: left;
         }
     }
-    &__passwordContainer{
+
+    &__passwordContainer {
+        align-items: center;
+        align-self: flex-start;
+        justify-content: flex-start;
         display: flex;
         gap: 8px;
+        margin-bottom: 40px;
+        position: relative;
+
     }
+
+    &__checkbox {
+        appearance: none;
+        background-color: #EFF3F8;
+        border: 1px solid #DCDCDC;
+        border-radius: 6px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+    }
+
+    &__containerCheckbox {
+        position: relative;
+    }
+
+    &__check {
+        background: #ED2590;
+        cursor: pointer;
+        width: 12.4px;
+        height: 14px;
+        gap: 0px;
+        border-radius: 4px;
+        opacity: 0px;
+        position: absolute;
+        top: 45%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    &__label {
+        color: #868686;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.52px;
+        text-align: left;
+    }
+
+    &__containerButton {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
+        @media (min-width: 1024px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__button {
+        border: 0px;
+        color: #ED2590;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.94px;
+        text-align: left;
+        padding: 14px 40px;
+        border-radius: 8px;
+        text-align: center;
+
+        @media (min-width: 1024px) {
+            font-size: 16px;
+        }
+    }
+
+    &__createAccount {
+        background-color: #EFF3F8;
+        color: #ED2590;
+    }
+
+    &__signIn {
+        background-color: #ED2590;
+        color: #EFF3F8;
+    }
+
+    &__forgetPassword {
+        color: #ED2590;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.52px;
+        text-align: left;
+        text-decoration: underline;
+    }
+}
+
+.visible {
+    visibility: visible;
 }
